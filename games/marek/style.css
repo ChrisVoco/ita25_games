@@ -1,0 +1,196 @@
+/* Base and Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Main Container matching the mockup */
+.game-container {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+/* Header */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-area h1 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.score-area {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1e56a0;
+}
+
+/* Controls */
+.controls-area {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.difficulty-selector {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Flag Display */
+.flag-area {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#flag-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Options Grid (5 Buttons) */
+.options-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Make the last two buttons center nicely if there are 5 */
+.options-area button:nth-child(4),
+.options-area button:nth-child(5) {
+  grid-column: auto
+}
+
+.option-btn {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #eee;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+/* Feedback States */
+.option-btn.correct-btn {
+  background-color: #e6f4ea;
+  border-color: #34a853;
+  color: #137333;
+}
+
+.option-btn.wrong-btn {
+  background-color: #fce8e6;
+  border-color: #ea4335;
+  color: #c5221f;
+}
+
+/* Footer elements */
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.feedback {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.feedback.success {
+  color: #34a853;
+}
+.feedback.error {
+  color: #ea4335;
+}
+
+.next-btn {
+  background-color: #1e56a0;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.next-btn:hover {
+  background-color: #15407a;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Map */
+.map-container {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}

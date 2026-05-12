@@ -17,4 +17,5 @@ window.ITA25_PLAYERS = [
   { displayName: "Elmar", slug: "elmar", tagline: "PLAYER 11", accentHue: 95 },
   { displayName: "Chris", slug: "chris", tagline: "PLAYER 12", accentHue: 220 },
   { displayName: "Markus", slug: "markus", tagline: "PLAYER 13", accentHue: 130 },
+  { displayName: "Margus", slug: "margus", tagline: "PLAYER 14", accentHue: 280 },
 ];
